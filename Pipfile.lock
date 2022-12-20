@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "31ff9b014c3e2eb2cc5008741ab256befc25d8ea9aea763149eb8d1898032c7b"
+            "sha256": "af5728a28d5f6f33cda079c7ddbb029bbae67be5cf50d27557c86280b19850e1"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -24,6 +24,22 @@
             "index": "pypi",
             "version": "==5.2.0"
         },
+        "iso639-lang": {
+            "hashes": [
+                "sha256:8458e4b45bff6e8d449afc35ff9b5aaefb954400fe93a39f71c37e5b766e9856",
+                "sha256:abaa4df7aeee0368e6b2b62b149eded5b005a4fea1c1d16e606d4820dcc51cf6"
+            ],
+            "markers": "python_version >= '3.6'",
+            "version": "==2.1.0"
+        },
+        "makemkv": {
+            "hashes": [
+                "sha256:05c7a473f4a81d379347091683da562aa5f171ae8bdd43a16d37cb6ac21e8492",
+                "sha256:3a3ae7b6efa792b1a6db0bf41753a728fdcb608e883c88728aac1e9ef6028105"
+            ],
+            "index": "pypi",
+            "version": "==0.3.0"
+        },
         "pywin32": {
             "hashes": [
                 "sha256:25746d841201fd9f96b648a248f731c1dec851c9a08b8e33da8b56148e4c65cc",
@@ -42,6 +58,14 @@
                 "sha256:f64c0377cf01b61bd5e76c25e1480ca8ab3b73f0c4add50538d332afdf8f69c5"
             ],
             "version": "==304"
+        },
+        "typing-extensions": {
+            "hashes": [
+                "sha256:25642c956049920a5aa49edcdd6ab1e06d7e5d467fc00e0506c44ac86fbfca02",
+                "sha256:e6d2677a32f47fc7eb2795db1dd15c1f34eff616bcaf2cfb5e997f854fa1c4a6"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==4.3.0"
         },
         "wmi": {
             "hashes": [

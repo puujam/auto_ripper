@@ -1,5 +1,6 @@
-def make_mkv_message_factory( line ):
-    #print( line )
+def make_mkv_message_factory( line, config ):
+    config.print_debug( line.strip() )
+
     if ":" in line:
         message_code, message_content = line.split( ":", maxsplit = 1 )
 
@@ -9,7 +10,6 @@ def make_mkv_message_factory( line ):
 
         return line
     else:
-        print( line )
         return line
 
 class Generic:
@@ -51,8 +51,8 @@ class ProgressBar:
         self.total = int( split[1] )
         self.max = int( split[2] )
 
-        self.current_percent = self.current/self.max
-        self.total_percent = self.total/self.max
+        self.current_percent = (self.current / self.max) * 100
+        self.total_percent = (self.total / self.max) * 100
 
 class Drive:
     CODE = "DRV"
@@ -68,11 +68,13 @@ class Drive:
         self.drive_name = split[4].strip( "\"" )
         self.disc_name = split[5].strip( "\"" )
 
-class DiscOut:
-    CODE = "TCOUT"
+class TitleCount:
+    CODE = "TCOUNT"
 
     def __init__( self, string ):
         self.string = string
+        
+        self.count = int( string )
 
 class DiscInfo:
     CODE = "CINFO"
@@ -98,7 +100,7 @@ message_classes = [
     TotalProgress,
     ProgressBar,
     Drive,
-    DiscOut,
+    TitleCount,
     DiscInfo,
     TitleInfo,
     StreamInfo
